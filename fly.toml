@@ -5,9 +5,9 @@
 
 app = 'washa-uburudike'
 primary_region = 'ams'
-
 [build]
-
+[processes]
+app = "gunicorn -w 2 -b 0.0.0.0:8080 app:app"
 [http_service]
   internal_port = 8080
   force_https = true
